@@ -2,7 +2,7 @@ const express= require('express');
 const app=express();
 const cors=require('cors')
 require('dotenv').config();
-const port=8000;
+const port=process.env.PORT;
 
 // this is to import db.js to start connection to the database 
 const connectToMongo=require('./db.js');
