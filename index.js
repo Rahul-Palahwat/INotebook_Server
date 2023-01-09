@@ -19,6 +19,10 @@ app.use(express.json());
 //Available routes
 // ab yha pr apun log end points ko routes folder se lenge 
 
+app.get('/', (req, res) => {
+    res.status(200).send({ message: "App started successfully!" })
+  })
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
 
